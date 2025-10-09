@@ -1,33 +1,52 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Your Number — Numbers</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css" />
-<script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-<script defer src="./certificate.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Number — Numbers</title>
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script defer src="./certificate.js"></script>
 </head>
+
 <body>
-<main class="wrap thankyou">
-<h1>Congratulations</h1>
-<p class="lead">You now own:</p>
+  <!-- === HEADER === -->
+  <header class="wrap header">
+    <div class="brand">NUM<span class="invert">BERS</span></div>
+    <nav class="nav">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./legal.html">Legal</a>
+    </nav>
+  </header>
 
+  <!-- === MAIN CONTENT === -->
+  <main class="wrap thankyou">
+    <h1>Congratulations</h1>
+    <p class="lead">You now own:</p>
 
-<div id="cert" class="cert">
-<div class="cert-title">NUMBERS — CERTIFICATE</div>
-<div id="certNumber" class="cert-number">#—</div>
-<div id="certSub" class="cert-sub">Owned by You · <span id="date"></span></div>
-</div>
+    <div id="cert" class="cert">
+      <div class="cert-title">NUMBERS — CERTIFICATE</div>
+      <div id="certNumber" class="cert-number">#—</div>
+      <div id="certSub" class="cert-sub">Owned by You · <span id="date"></span></div>
+    </div>
 
+    <div class="actions">
+      <a class="btn" id="downloadBtn">Download Certificate</a>
+      <a class="btn ghost" href="./index.html">Back home</a>
+    </div>
+  </main>
 
-<div class="actions">
-<a class="btn" id="downloadBtn">Download Certificate</a>
-<a class="btn ghost" href="./index.html">Back home</a>
-</div>
-</main>
+  <!-- === FOOTER === -->
+  <footer class="wrap footer">
+    <div>© 2025 Numbers | <a href="/legal.html#terms">Terms</a> | <a href="/legal.html#privacy">Privacy</a></div>
+  </footer>
 </body>
 </html>
