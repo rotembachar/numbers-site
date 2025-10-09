@@ -46,7 +46,7 @@ ol { padding-inline-start: 20px; }
   width: 800px;
   height: 500px;
   margin: 60px auto;
-  background-image: url('cert-template.png'); /* התמונה הקבועה שלך */
+  background-image: url('CERTIFICATE.png');
   background-size: cover;
   background-position: center;
   color: #111;
@@ -94,4 +94,5 @@ ol { padding-inline-start: 20px; }
   justify-content: center;
   pointer-events: none;
 }
+
 
