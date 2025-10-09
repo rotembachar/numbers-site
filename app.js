@@ -1,6 +1,11 @@
 // === CONFIG ===
 
 
+const SUPABASE_URL = "https://ncpgryutaaztylbnhmzl.supabase.co"; // החליפי בשלך
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5jcGdyeXV0YWF6dHlsYm5obXpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk5Mjc1ODgsImV4cCI6MjA3NTUwMzU4OH0.W7hWhSnYZ5xjarjndnTArhLT265EDP7-cdaejhgeI5c";                    // החליפי בשלך
+const STRIPE_CHECKOUT_URL = "";                               // אופציונלי לשלב מאוחר יותר
+
+
 // === INIT ===
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const lastEl = document.getElementById('lastNumber');
@@ -59,3 +64,4 @@ buyBtn.disabled = false; buyBtn.textContent = 'Buy the Next Number';
 
 
 refreshCounter();
+
