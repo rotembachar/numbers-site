@@ -16,7 +16,8 @@ return `${yyyy}-${mm}-${dd}`;
 const fromSession = sessionStorage.getItem('numbers:last');
 const fromQuery = qs('num');
 const num = fromQuery || fromSession || '—';
-document.getElementById('certNumber').textContent = `#${num}`;
+const name = sessionStorage.getItem('numbers:name') || 'Anonymous';
+document.getElementById('certSub').textContent = `Owned by ${name} · ${formatDate()}`;
 document.getElementById('date').textContent = formatDate();
 
 
@@ -30,3 +31,4 @@ link.href = canvas.toDataURL('image/png');
 link.click();
 });
 })();
+
