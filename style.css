@@ -95,4 +95,16 @@ ol { padding-inline-start: 20px; }
   pointer-events: none;
 }
 
+.input-name {
+  display: block;
+  margin: 16px auto;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  width: min(260px, 80%);
+}
+
+
 
