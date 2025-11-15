@@ -70,3 +70,4 @@ buyBtn.disabled = false; buyBtn.textContent = 'Buy the Next Number';
 // refreshCounter(); // disabled for mystery concept
 
 
+
