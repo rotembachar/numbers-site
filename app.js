@@ -51,8 +51,12 @@ return;
 buyBtn.disabled = true; buyBtn.textContent = 'Reserving…';
 try {
 const num = await reserveNextNumber();
-// Pass number to thank-you page
+const userName = document.getElementById('userName')?.value?.trim() || 'Anonymous';
+
+// Pass data to thank-you page
 sessionStorage.setItem('numbers:last', String(num));
+sessionStorage.setItem('numbers:name', userName);
+
 window.location.href = `./thankyou.html?num=${encodeURIComponent(num)}`;
 } catch (e) {
 console.error(e);
@@ -64,4 +68,5 @@ buyBtn.disabled = false; buyBtn.textContent = 'Buy the Next Number';
 
 
 // refreshCounter(); // disabled for mystery concept
+
 
