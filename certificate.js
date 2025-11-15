@@ -1,4 +1,4 @@
-function qs(name) {
+function getParam(name) {
   const url = new URL(window.location.href);
   return url.searchParams.get(name);
 }
@@ -10,14 +10,14 @@ function formatDate(d = new Date()) {
   return `${yyyy}-${mm}-${dd}`;
 }
 
-(function init() {
-  // Get number and name
-  const fromSession = sessionStorage.getItem('numbers:last');
-  const fromQuery = qs('num');
-  const num = fromQuery || fromSession || '—';
+document.addEventListener("DOMContentLoaded", async () => {
+  // קריאת המספר והשם
+  const numFromUrl = getParam('num');
+  const numFromSession = sessionStorage.getItem('numbers:last');
+  const num = numFromUrl || numFromSession || '—';
   const name = sessionStorage.getItem('numbers:name') || 'Anonymous';
 
-  // Insert data into certificate
+  // הצבה בתעודה
   const certNumEl = document.getElementById('certNumber');
   const certSubEl = document.getElementById('certSub');
   const dateEl = document.getElementById('date');
@@ -26,7 +26,7 @@ function formatDate(d = new Date()) {
   if (certSubEl) certSubEl.textContent = `Owned by ${name} · ${formatDate()}`;
   if (dateEl) dateEl.textContent = formatDate();
 
-  // Download button logic
+  // כפתור הורדה
   const btn = document.getElementById('downloadBtn');
   const node = document.getElementById('cert');
 
@@ -39,9 +39,9 @@ function formatDate(d = new Date()) {
         link.href = canvas.toDataURL('image/png');
         link.click();
       } catch (err) {
-        console.error('Certificate download failed:', err);
+        console.error('Download failed:', err);
         alert('Could not generate certificate. Please try again.');
       }
     });
   }
-})();
+});
