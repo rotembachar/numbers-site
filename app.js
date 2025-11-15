@@ -63,5 +63,5 @@ buyBtn.disabled = false; buyBtn.textContent = 'Buy the Next Number';
 });
 
 
-refreshCounter();
+// refreshCounter(); // disabled for mystery concept
 
