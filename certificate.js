@@ -1,4 +1,4 @@
-function getParam(name) {
+function qs(name) {
   const url = new URL(window.location.href);
   return url.searchParams.get(name);
 }
@@ -11,10 +11,9 @@ function formatDate(d = new Date()) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  // קריאת המספר והשם
-  const numFromUrl = getParam('num');
-  const numFromSession = sessionStorage.getItem('numbers:last');
-  const num = numFromUrl || numFromSession || '—';
+  const fromSession = sessionStorage.getItem('numbers:last');
+  const fromQuery = qs('num');
+  const num = fromQuery || fromSession || '—';
   const name = sessionStorage.getItem('numbers:name') || 'Anonymous';
 
   // הצבה בתעודה
